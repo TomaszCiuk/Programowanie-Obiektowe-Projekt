@@ -24,7 +24,7 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="623,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="795,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="881,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
-        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="25" Margin="571,304,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center">
+        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="25" Margin="571,304,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center" BorderBrush="#FF918B5F" Background="{x:Null}" Foreground="White">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -271,9 +271,17 @@
                 <DropShadowEffect/>
             </Border.Effect>
         </Border>
-        <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,362,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,362,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="White">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="#FFFCFCFC"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="1043,362,0,0" VerticalAlignment="Top"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Height="50" Margin="10,369,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Height="50" Margin="10,369,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
