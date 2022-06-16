@@ -14,13 +14,41 @@
             <RowDefinition Height="177*"/>
             <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
-        <Label Content="Dodaj przedmiot" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="166" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,55,0,0" TextWrapping="Wrap" Text="Nazwa" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,160,0,0" VerticalAlignment="Top" Width="50"/>
-        <Label Content="Przypisz przedmiot" HorizontalAlignment="Center" Height="40" Margin="0,190,0,0" VerticalAlignment="Top" Width="200" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,235,0,0" TextWrapping="Wrap" Text="Cena kupna" VerticalAlignment="Top" Width="100" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,265,0,0" TextWrapping="Wrap" Text="Cena sprzedaży" VerticalAlignment="Top" Width="100" TextAlignment="Center"/>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,29,0,0" VerticalAlignment="Top" Width="50" Grid.Row="1"/>
+        <Label Content="Dodaj przedmiot" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="166" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,55,0,0" TextWrapping="Wrap" Text="Nazwa" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,160,0,0" VerticalAlignment="Top" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Przypisz przedmiot" HorizontalAlignment="Center" Height="40" Margin="0,190,0,0" VerticalAlignment="Top" Width="200" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,235,0,0" TextWrapping="Wrap" Text="Cena kupna" VerticalAlignment="Top" Width="100" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,265,0,0" TextWrapping="Wrap" Text="Cena sprzedaży" VerticalAlignment="Top" Width="100" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,29,0,0" VerticalAlignment="Top" Width="50" Grid.Row="1" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

@@ -14,7 +14,7 @@
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="1"/>
-                <GradientStop Color="#FF867F66" Offset="0"/>
+                <GradientStop Color="#FF7F7861" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Image HorizontalAlignment="Left" Height="75" Margin="368,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
