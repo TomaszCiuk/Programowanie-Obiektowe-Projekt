@@ -156,6 +156,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Jaeger.jpg" />
+    <Resource Include="Images\Mechanic.jpg" />
+    <Resource Include="Images\Peacekeeper.jpg" />
+    <Resource Include="Images\Prapor.jpg" />
+    <Resource Include="Images\Ragman.jpg" />
+    <Resource Include="Images\Skier.jpg" />
+    <Resource Include="Images\Therapist.jpg" />
     <Content Include="Projekt.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Projekt.Context.cs</LastGenOutput>
@@ -166,10 +173,11 @@
       <DependentUpon>Projekt.edmx</DependentUpon>
       <LastGenOutput>Projekt.cs</LastGenOutput>
     </Content>
-    <Resource Include="uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg" />
+    <Resource Include="Images\uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

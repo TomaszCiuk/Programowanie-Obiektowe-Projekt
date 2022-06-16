@@ -41,7 +41,7 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
         <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="23" Margin="426,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Image HorizontalAlignment="Left" Height="104" Margin="219,0,0,0" VerticalAlignment="Top" Width="229" Source="/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
+        <Image HorizontalAlignment="Left" Height="104" Margin="219,0,0,0" VerticalAlignment="Top" Width="229" Source="Images/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
         <Label Content="CALCULATOR" HorizontalAlignment="Left" Height="76" Margin="448,24,0,0" VerticalAlignment="Top" Width="322" FontSize="48" FontFamily="Stencil" FontWeight="Bold" Background="{x:Null}">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
