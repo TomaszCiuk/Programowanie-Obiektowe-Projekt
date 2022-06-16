@@ -11,12 +11,19 @@
         <CollectionViewSource x:Key="itemyViewSource" Source="{Binding Itemy, Source={StaticResource pROJEKTDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource itemyViewSource}">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="419" VerticalAlignment="Bottom" Width="301">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="214">
             <DataGrid x:Name="itemyDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="-1,-1,-1,218" RowDetailsVisibilityMode="VisibleWhenSelected">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="293"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
+        <Image HorizontalAlignment="Left" Height="75" Margin="231,88,0,0" VerticalAlignment="Top" Width="75" Source="/Prapor.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="311,88,0,0" VerticalAlignment="Top" Width="75" Source="/Therapist.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="391,88,0,0" VerticalAlignment="Top" Width="75" Source="/Skier.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="551,88,0,0" VerticalAlignment="Top" Width="75" Source="/Mechanic.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="471,88,0,0" VerticalAlignment="Top" Width="75" Source="/Peacekeeper.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="/Ragman.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="/Jaeger.jpg"/>
     </Grid>
 </Window>
