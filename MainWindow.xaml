@@ -1,0 +1,22 @@
+﻿<Window x:Class="Programowanie_Obiektowe___Projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Programowanie_Obiektowe___Projekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:PROJEKTDataSet x:Key="pROJEKTDataSet"/>
+        <CollectionViewSource x:Key="itemyViewSource" Source="{Binding Itemy, Source={StaticResource pROJEKTDataSet}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource itemyViewSource}">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="419" VerticalAlignment="Bottom" Width="301">
+            <DataGrid x:Name="itemyDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="-1,-1,-1,218" RowDetailsVisibilityMode="VisibleWhenSelected">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="293"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</Window>
