@@ -259,10 +259,11 @@
             </TreeViewItem>
         </TreeView>
         <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="White" Click="ButtonPrice_Click">
-            <Button.Effect>
+        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="-2,1,0,0">
+            <Border.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
+            </Border.Effect>
+        </Border>
         <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="#FFFCFCFC"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="1043,362,0,0" VerticalAlignment="Top"/>
         <Button Content="Dodaj" HorizontalAlignment="Left" Height="43" Margin="910,362,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White" Click="Button_Click">
