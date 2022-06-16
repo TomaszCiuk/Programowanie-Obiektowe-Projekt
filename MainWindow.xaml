@@ -80,7 +80,7 @@
             </Label.Effect>
         </Label>
         <TreeView HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}">
-            <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338">
+            <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -96,7 +96,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="Gear" IsSelected="True" Width="338">
+            <TreeViewItem Header="Gear" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="gearDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="210">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn1" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -112,7 +112,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="WeaponsParts" IsSelected="True" Width="338">
+            <TreeViewItem Header="WeaponsParts" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="weaponsPartsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="216">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn2" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -128,7 +128,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="Weapons" IsSelected="True" Width="338">
+            <TreeViewItem Header="Weapons" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="weaponsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="215">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn3" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -144,7 +144,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="Ammo" IsSelected="True" Width="338">
+            <TreeViewItem Header="Ammo" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="ammoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn4" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -160,7 +160,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="Provisions" IsSelected="True" Width="338">
+            <TreeViewItem Header="Provisions" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="provisionsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn5" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -176,7 +176,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="Medication" IsSelected="True" Width="338">
+            <TreeViewItem Header="Medication" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="medicationsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="218">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn6" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -192,7 +192,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="Keys" IsSelected="True" Width="338">
+            <TreeViewItem Header="Keys" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="keysDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="213">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn7" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -208,7 +208,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="SpecialEquipment" IsSelected="True" Width="338">
+            <TreeViewItem Header="SpecialEquipment" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="specialEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn8" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -224,7 +224,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="MapsEquipment" IsSelected="True" Width="338">
+            <TreeViewItem Header="MapsEquipment" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="mapsEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="218">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn9" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -257,7 +257,7 @@
                 </DataGrid>
             </TreeViewItem>
         </TreeView>
-        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="-1,0,0,0">
+        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="3,279,0,0">
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
