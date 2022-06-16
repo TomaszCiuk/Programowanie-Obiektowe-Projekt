@@ -18,12 +18,12 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
-        <Image HorizontalAlignment="Left" Height="75" Margin="231,88,0,0" VerticalAlignment="Top" Width="75" Source="/Prapor.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="311,88,0,0" VerticalAlignment="Top" Width="75" Source="/Therapist.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="391,88,0,0" VerticalAlignment="Top" Width="75" Source="/Skier.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="551,88,0,0" VerticalAlignment="Top" Width="75" Source="/Mechanic.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="471,88,0,0" VerticalAlignment="Top" Width="75" Source="/Peacekeeper.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="/Ragman.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="/Jaeger.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="231,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="311,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="391,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Skier.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="551,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Mechanic.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="471,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
     </Grid>
 </Window>

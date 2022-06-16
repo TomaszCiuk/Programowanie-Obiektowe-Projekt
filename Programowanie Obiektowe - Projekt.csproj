@@ -156,13 +156,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Ragman.jpg" />
-    <Resource Include="Skier.jpg" />
-    <Resource Include="Therapist.jpg" />
-    <Resource Include="Prapor.jpg" />
-    <Resource Include="Peacekeeper.jpg" />
-    <Resource Include="Mechanic.jpg" />
-    <Resource Include="Jaeger.jpg" />
     <Content Include="Projekt.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Projekt.Context.cs</LastGenOutput>
