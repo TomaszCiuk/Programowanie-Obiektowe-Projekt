@@ -257,7 +257,7 @@
                 </DataGrid>
             </TreeViewItem>
         </TreeView>
-        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="3,279,0,0">
+        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="-2,1,0,0">
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
