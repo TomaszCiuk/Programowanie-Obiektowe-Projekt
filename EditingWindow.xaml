@@ -8,7 +8,7 @@
         Title="EditingWindow" Height="450" Width="300">
     <Grid>
         <Grid.Background>
-            <ImageBrush/>
+            <ImageBrush ImageSource="/tło_Editing_Window.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="177*"/>

@@ -156,6 +156,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="tło_Editing_Window.jpg" />
     <Resource Include="Images\Jaeger.jpg" />
     <Resource Include="Images\Mechanic.jpg" />
     <Resource Include="Images\Peacekeeper.jpg" />
@@ -163,6 +164,8 @@
     <Resource Include="Images\Ragman.jpg" />
     <Resource Include="Images\Skier.jpg" />
     <Resource Include="Images\Therapist.jpg" />
+    <Resource Include="20220519_222320.jpg" />
+    <Resource Include="fmv0jpkuyeb01.png" />
     <Content Include="Projekt.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Projekt.Context.cs</LastGenOutput>
