@@ -14,7 +14,16 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="214">
             <DataGrid x:Name="itemyDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="-1,-1,-1,218" RowDetailsVisibilityMode="VisibleWhenSelected">
                 <DataGrid.Columns>
-                    <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="293"/>
+                    <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="btnDelete" Click="Button_AssingClick" >Sprawdź</Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
@@ -25,5 +34,6 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="471,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
+        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="23" Margin="426,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
     </Grid>
 </Window>

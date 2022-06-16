@@ -35,5 +35,20 @@ namespace Programowanie_Obiektowe___Projekt
             System.Windows.Data.CollectionViewSource itemyViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("itemyViewSource")));
             itemyViewSource.View.MoveCurrentToFirst();
         }
+
+        private void Button_AssingClick(object sender, RoutedEventArgs e)
+        {
+            DataGrid dataGrid = itemyDataGrid;
+            DataGridRow Row = (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromIndex(dataGrid.SelectedIndex);
+            DataGridCell RowAndColumn = (DataGridCell)dataGrid.Columns[0].GetCellContent(Row).Parent;
+            string CellValue = ((TextBlock)RowAndColumn.Content).Text;
+
+            NazwaItemu.Text = CellValue;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
