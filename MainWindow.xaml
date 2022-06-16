@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programowanie_Obiektowe___Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="977.647" Loaded="Window_Loaded">
     <Window.Resources>
         <local:PROJEKTDataSet x:Key="pROJEKTDataSet"/>
         <CollectionViewSource x:Key="itemyViewSource" Source="{Binding Itemy, Source={StaticResource pROJEKTDataSet}}"/>
@@ -17,32 +17,17 @@
                 <GradientStop Color="#FF867F66" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="214">
-            <DataGrid x:Name="itemyDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="-1,-1,-1,218" RowDetailsVisibilityMode="VisibleWhenSelected">
-                <DataGrid.Columns>
-                    <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
-                    <DataGridTemplateColumn>
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="btnDelete" Click="Button_AssingClick" >Sprawdź</Button>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Border>
-        <Image HorizontalAlignment="Left" Height="75" Margin="231,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="311,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="391,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Skier.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="551,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Mechanic.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="471,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
-        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="23" Margin="426,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Image HorizontalAlignment="Left" Height="104" Margin="219,0,0,0" VerticalAlignment="Top" Width="229" Source="Images/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
-        <Label Content="CALCULATOR" HorizontalAlignment="Left" Height="76" Margin="448,24,0,0" VerticalAlignment="Top" Width="322" FontSize="48" FontFamily="Stencil" FontWeight="Bold" Background="{x:Null}">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="419" VerticalAlignment="Center" Width="346" Margin="0,0,624,0"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="368,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="453,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="538,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Skier.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="710,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Mechanic.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="623,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="795,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="881,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
+        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="22" Margin="580,309,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="168" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="104" Margin="351,-1,0,0" VerticalAlignment="Top" Width="229" Source="Images/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
+        <Label Content="CALCULATOR" HorizontalAlignment="Left" Height="76" Margin="580,23,0,0" VerticalAlignment="Top" Width="322" FontSize="48" FontFamily="Stencil" FontWeight="Bold" Background="{x:Null}">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF3B382E" Offset="1"/>
@@ -52,12 +37,190 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Label Content="Prapor" HorizontalAlignment="Left" Height="37" Margin="231,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Therapist" HorizontalAlignment="Left" Height="37" Margin="311,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Skier" HorizontalAlignment="Left" Height="37" Margin="391,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Peacekepeer" HorizontalAlignment="Left" Height="37" Margin="456,157,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Mechanic" HorizontalAlignment="Left" Height="37" Margin="551,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Ragman" HorizontalAlignment="Left" Height="37" Margin="631,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Jaeger" HorizontalAlignment="Left" Height="37" Margin="710,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Prapor" HorizontalAlignment="Left" Height="37" Margin="368,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Therapist" HorizontalAlignment="Left" Height="37" Margin="453,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Skier" HorizontalAlignment="Left" Height="37" Margin="538,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Peacekepeer" HorizontalAlignment="Left" Height="37" Margin="608,156,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Mechanic" HorizontalAlignment="Left" Height="37" Margin="710,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Ragman" HorizontalAlignment="Left" Height="37" Margin="795,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Jaeger" HorizontalAlignment="Left" Height="37" Margin="880,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <TreeView HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="346">
+            <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338">
+                <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingBarterItemsClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="Gear" IsSelected="True" Width="338">
+                <DataGrid x:Name="gearDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="210">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn1" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingGearClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="WeaponsParts" IsSelected="True" Width="338">
+                <DataGrid x:Name="weaponsPartsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="216">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn2" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingWeaponsPartsClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="Weapons" IsSelected="True" Width="338">
+                <DataGrid x:Name="weaponsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="215">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn3" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingWeaponsClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="Ammo" IsSelected="True" Width="338">
+                <DataGrid x:Name="ammoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn4" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingAmmoClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="Provisions" IsSelected="True" Width="338">
+                <DataGrid x:Name="provisionsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn5" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingProvisionsClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="Medication" IsSelected="True" Width="338">
+                <DataGrid x:Name="medicationsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="218">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn6" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingMedicationClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="Keys" IsSelected="True" Width="338">
+                <DataGrid x:Name="keysDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="213">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn7" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingKeysClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="SpecialEquipment" IsSelected="True" Width="338">
+                <DataGrid x:Name="specialEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn8" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingSpecialEquipmentClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="MapsEquipment" IsSelected="True" Width="338">
+                <DataGrid x:Name="mapsEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="218">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn9" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingMapsClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+            <TreeViewItem Header="MoneyEquipment" IsSelected="True" Width="338">
+                <DataGrid x:Name="moneyEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="nazwaColumn10" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnDelete" Click="Button_AssingMoneyClick" Content="Sprawdź" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TreeViewItem>
+        </TreeView>
     </Grid>
 </Window>
