@@ -11,6 +11,12 @@
         <CollectionViewSource x:Key="itemyViewSource" Source="{Binding Itemy, Source={StaticResource pROJEKTDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource itemyViewSource}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF867F66" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="214">
             <DataGrid x:Name="itemyDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="-1,-1,-1,218" RowDetailsVisibilityMode="VisibleWhenSelected">
                 <DataGrid.Columns>
@@ -35,5 +41,7 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="631,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="711,88,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
         <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="23" Margin="426,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Image HorizontalAlignment="Left" Height="104" Margin="219,0,0,0" VerticalAlignment="Top" Width="229" Source="/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
+        <Label Content="CALCULATOR" HorizontalAlignment="Left" Height="59" Margin="448,29,0,0" VerticalAlignment="Top" Width="258" FontSize="36" Foreground="White" FontFamily="Stencil" FontWeight="Bold"/>
     </Grid>
 </Window>

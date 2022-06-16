@@ -166,6 +166,7 @@
       <DependentUpon>Projekt.edmx</DependentUpon>
       <LastGenOutput>Projekt.cs</LastGenOutput>
     </Content>
+    <Resource Include="uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
