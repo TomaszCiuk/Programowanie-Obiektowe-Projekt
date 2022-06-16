@@ -17,7 +17,6 @@
                 <GradientStop Color="#FF867F66" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="419" VerticalAlignment="Center" Width="346" Margin="0,0,624,0"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="368,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="453,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="538,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Skier.jpg"/>
@@ -28,6 +27,9 @@
         <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="22" Margin="580,309,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="168" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center"/>
         <Image HorizontalAlignment="Left" Height="104" Margin="351,-1,0,0" VerticalAlignment="Top" Width="229" Source="Images/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
         <Label Content="CALCULATOR" HorizontalAlignment="Left" Height="76" Margin="580,23,0,0" VerticalAlignment="Top" Width="322" FontSize="48" FontFamily="Stencil" FontWeight="Bold" Background="{x:Null}">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF3B382E" Offset="1"/>
@@ -37,14 +39,48 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Label Content="Prapor" HorizontalAlignment="Left" Height="37" Margin="368,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Therapist" HorizontalAlignment="Left" Height="37" Margin="453,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Skier" HorizontalAlignment="Left" Height="37" Margin="538,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Peacekepeer" HorizontalAlignment="Left" Height="37" Margin="608,156,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Mechanic" HorizontalAlignment="Left" Height="37" Margin="710,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Ragman" HorizontalAlignment="Left" Height="37" Margin="795,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <Label Content="Jaeger" HorizontalAlignment="Left" Height="37" Margin="880,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
-        <TreeView HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="346">
+        <Label Content="Prapor" HorizontalAlignment="Left" Height="37" Margin="368,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Therapist" HorizontalAlignment="Left" Height="37" Margin="453,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Skier" HorizontalAlignment="Left" Height="37" Margin="538,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Peacekepeer" HorizontalAlignment="Left" Height="37" Margin="608,156,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Mechanic" HorizontalAlignment="Left" Height="37" Margin="710,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Ragman" HorizontalAlignment="Left" Height="37" Margin="795,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Jaeger" HorizontalAlignment="Left" Height="37" Margin="880,156,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <TreeView HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C">
+            <TreeView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF837C64" Offset="0"/>
+                </LinearGradientBrush>
+            </TreeView.Background>
             <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>
@@ -222,5 +258,10 @@
                 </DataGrid>
             </TreeViewItem>
         </TreeView>
+        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="-1,0,0,0">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+        </Border>
     </Grid>
 </Window>
