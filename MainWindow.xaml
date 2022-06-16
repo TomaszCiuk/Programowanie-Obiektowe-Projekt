@@ -278,7 +278,7 @@
         </Button>
         <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="#FFFCFCFC"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="1043,362,0,0" VerticalAlignment="Top"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Height="50" Margin="10,369,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White">
+        <Button Content="Dodaj" HorizontalAlignment="Left" Height="50" Margin="918,374,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
