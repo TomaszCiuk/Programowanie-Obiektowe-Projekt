@@ -156,6 +156,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="tlo_glowne_okno.jpg" />
     <Resource Include="tło_Editing_Window.jpg" />
     <Resource Include="Images\Jaeger.jpg" />
     <Resource Include="Images\Mechanic.jpg" />

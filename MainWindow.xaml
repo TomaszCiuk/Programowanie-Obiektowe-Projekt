@@ -12,10 +12,7 @@
     </Window.Resources>
     <Grid DataContext="{StaticResource itemyViewSource}">
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="1"/>
-                <GradientStop Color="#FF7F7861" Offset="0"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="/tlo_glowne_okno.jpg"/>
         </Grid.Background>
         <Image HorizontalAlignment="Left" Height="75" Margin="368,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="453,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg"/>
@@ -82,13 +79,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TreeView HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C">
-            <TreeView.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF837C64" Offset="0"/>
-                </LinearGradientBrush>
-            </TreeView.Background>
+        <TreeView HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}">
             <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>
