@@ -9,6 +9,7 @@
     <Window.Resources>
         <local:PROJEKTDataSet x:Key="pROJEKTDataSet"/>
         <CollectionViewSource x:Key="itemyViewSource" Source="{Binding Itemy, Source={StaticResource pROJEKTDataSet}}"/>
+        <CollectionViewSource x:Key="praporViewSource" Source="{Binding Prapor, Source={StaticResource pROJEKTDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource itemyViewSource}">
         <Grid.Background>
@@ -79,7 +80,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TreeView HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}">
+        <TreeView HorizontalAlignment="Left" Height="419" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}">
             <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>
@@ -240,7 +241,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="MoneyEquipment" IsSelected="True" Width="338">
+            <TreeViewItem Header="MoneyEquipment" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="moneyEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn10" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -257,22 +258,25 @@
                 </DataGrid>
             </TreeViewItem>
         </TreeView>
-        <Border BorderBrush="#FFA19439" BorderThickness="1" HorizontalAlignment="Left" Height="437" VerticalAlignment="Top" Width="347" Margin="3,279,0,0">
-            <Border.Effect>
-                <DropShadowEffect/>
-            </Border.Effect>
-        </Border>
-        <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="White">
+        <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="White" Click="ButtonPrice_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
         <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="#FFFCFCFC"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="1043,362,0,0" VerticalAlignment="Top"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Height="50" Margin="918,374,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White">
+        <Button Content="Dodaj" HorizontalAlignment="Left" Height="43" Margin="910,362,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White" Click="Button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <TextBox  x:Name="therapistPrice" HorizontalAlignment="Left" Height="23" Margin="453,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
+        <TextBox  x:Name="skierPrice" HorizontalAlignment="Left" Height="23" Margin="538,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
+        <TextBox  x:Name="peacekeeperPrice" HorizontalAlignment="Left" Height="23" Margin="623,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
+        <TextBox  x:Name="mechanicPrice" HorizontalAlignment="Left" Height="23" Margin="710,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
+        <TextBox  x:Name="ragmanPrice" HorizontalAlignment="Left" Height="23" Margin="795,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
+        <TextBox  x:Name="jaegerPrice" HorizontalAlignment="Left" Height="23" Margin="881,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
+        <TextBox  x:Name="errorMessage" HorizontalAlignment="Left" Height="23" Margin="580,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged" FontSize="20"/>
+        <TextBox  x:Name="praporPrice" HorizontalAlignment="Left" Height="23" Margin="373,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="praporPrice_TextChanged"/>
     </Grid>
 </Window>
