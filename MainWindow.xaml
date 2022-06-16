@@ -43,5 +43,12 @@
         <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="23" Margin="426,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
         <Image HorizontalAlignment="Left" Height="104" Margin="219,0,0,0" VerticalAlignment="Top" Width="229" Source="/uploads_escape_from_tarkov_escape_from_tarkov_PNG1.jpg"/>
         <Label Content="CALCULATOR" HorizontalAlignment="Left" Height="59" Margin="448,29,0,0" VerticalAlignment="Top" Width="258" FontSize="36" Foreground="White" FontFamily="Stencil" FontWeight="Bold"/>
+        <Label Content="Prapor" HorizontalAlignment="Left" Height="37" Margin="231,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Therapist" HorizontalAlignment="Left" Height="37" Margin="311,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Skier" HorizontalAlignment="Left" Height="37" Margin="391,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Peacekepeer" HorizontalAlignment="Left" Height="37" Margin="456,157,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Mechanic" HorizontalAlignment="Left" Height="37" Margin="551,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Ragman" HorizontalAlignment="Left" Height="37" Margin="631,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label Content="Jaeger" HorizontalAlignment="Left" Height="37" Margin="710,157,0,0" VerticalAlignment="Top" Width="80" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
     </Grid>
 </Window>
