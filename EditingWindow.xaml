@@ -19,12 +19,12 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,55,0,0" TextWrapping="Wrap" Text="Nazwa" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+        <TextBox x:Name="itemName" HorizontalAlignment="Center" Height="25" Margin="0,55,0,0" TextWrapping="Wrap" Text="Nazwa" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
             <TextBox.Background>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,160,0,0" VerticalAlignment="Top" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F">
+        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,160,0,0" VerticalAlignment="Top" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F" Click="Button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -44,12 +44,12 @@
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,29,0,0" VerticalAlignment="Top" Width="50" Grid.Row="1" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F">
+        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="121,42,121,0" VerticalAlignment="Top" Width="50" Grid.Row="1" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox HorizontalAlignment="Left" Margin="63,97,0,0" VerticalAlignment="Top" Width="166">
+        <ComboBox x:Name="itemCategory" HorizontalAlignment="Left" Margin="63,97,0,0" VerticalAlignment="Top" Width="166" SelectedValuePath="Text">
             <TextBlock TextWrapping="Wrap" Text="BaarterItems"/>
             <TextBlock TextWrapping="Wrap" Text="Gear"/>
             <TextBlock TextWrapping="Wrap" Text="WeaponsParts"/>
@@ -69,6 +69,8 @@
             <TextBlock TextWrapping="Wrap" Text="Ragman"/>
             <TextBlock TextWrapping="Wrap" Text="Jaeger"/>
         </ComboBox>
+        <TextBox  x:Name="addingMessage" HorizontalAlignment="Left" Height="31" Margin="46,124,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="200" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" Background="{x:Null}"/>
+        <TextBox  x:Name="assingMessage" HorizontalAlignment="Left" Height="31" Margin="63,334,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="166" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" Background="{x:Null}" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

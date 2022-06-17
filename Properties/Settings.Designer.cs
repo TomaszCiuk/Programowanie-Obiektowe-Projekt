@@ -32,5 +32,15 @@ namespace Programowanie_Obiektowe___Projekt.Properties {
                 return ((string)(this["PROJEKTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HDFK083;Initial Catalog=PROJEKT;Integrated Security=True")]
+        public string PROJEKTConnectionString1 {
+            get {
+                return ((string)(this["PROJEKTConnectionString1"]));
+            }
+        }
     }
 }
