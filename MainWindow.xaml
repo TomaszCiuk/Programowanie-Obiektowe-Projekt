@@ -22,7 +22,7 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="623,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="795,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="881,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
-        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="25" Margin="571,304,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center" BorderBrush="#FF918B5F" Background="{x:Null}" Foreground="White">
+        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="25" Margin="514,314,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="296" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center" BorderBrush="#FF918B5F" Background="{x:Null}" Foreground="White">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -80,7 +80,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TreeView HorizontalAlignment="Left" Height="419" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}">
+        <TreeView HorizontalAlignment="Left" Height="431" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}" BorderBrush="#FF918B5F">
             <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>
@@ -241,7 +241,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="MoneyEquipment" IsSelected="True" Width="338" Foreground="White">
+            <TreeViewItem Header="MoneyEquipment" IsSelected="True" Width="338" Foreground="Black" Background="{x:Null}">
                 <DataGrid x:Name="moneyEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn10" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
