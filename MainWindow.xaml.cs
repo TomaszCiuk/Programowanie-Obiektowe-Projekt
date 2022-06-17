@@ -354,7 +354,8 @@ namespace Programowanie_Obiektowe___Projekt
             peacekeeperPrice.Text =
                 quaryPeacekeeper.FirstOrDefault() == 0
                 ? "Handlarz nie sprzedaje przedmiotu"
-                : $"{quaryPeacekeeper.FirstOrDefault()} $";
+                : $"{quaryPeacekeeper.FirstOrDefault()} $" + '\n' +
+                $" {quaryPeacekeeper.FirstOrDefault()*112}  ₽";
 
             var quaryMechanic =
                 from mechanic in pROJEKTDataSet.Mechanic
@@ -456,7 +457,8 @@ namespace Programowanie_Obiektowe___Projekt
             peacekeeperPrice.Text =
                 quaryPeacekeeper.FirstOrDefault() == 0
                 ? "Handlarz nie kupuje przedmiotu"
-                : $"{quaryPeacekeeper.FirstOrDefault()} $";
+                : $"{quaryPeacekeeper.FirstOrDefault()} $" + '\n' +
+                $" {quaryPeacekeeper.FirstOrDefault() * 112}  ₽";
 
             //SetPrice<MechanicDataTable>(mechanicPrice, pROJEKTDataSet, pROJEKTDataSet.Mechanic);
 

@@ -225,7 +225,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="MapsEquipment" IsSelected="True" Width="338" Foreground="White">
+            <TreeViewItem Header="MapsEquipment" Width="338" Foreground="White">
                 <DataGrid x:Name="mapsEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="218">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn9" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -241,7 +241,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TreeViewItem>
-            <TreeViewItem Header="MoneyEquipment" IsSelected="True" Width="338" Foreground="Black" Background="{x:Null}">
+            <TreeViewItem Header="MoneyEquipment" IsSelected="False" Width="338" Foreground="White">
                 <DataGrid x:Name="moneyEquipmentDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="220">
                     <DataGrid.Columns>
                         <DataGridTextColumn x:Name="nazwaColumn10" Binding="{Binding Nazwa}" Header="Nazwa" Width="auto"/>
@@ -285,7 +285,7 @@
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox  x:Name="peacekeeperPrice" HorizontalAlignment="Left" Height="50" Margin="623,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+        <TextBox  x:Name="peacekeeperPrice" HorizontalAlignment="Left" Height="50" Margin="623,198,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
             <TextBox.Background>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
