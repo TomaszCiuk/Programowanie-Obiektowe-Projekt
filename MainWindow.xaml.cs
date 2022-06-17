@@ -260,7 +260,7 @@ namespace Programowanie_Obiektowe___Projekt
         EditingWindow wnd;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (wnd != null || wnd.IsVisible)
+            if (wnd == null || !wnd.IsVisible)
             {
                 wnd = new EditingWindow();
                 wnd.Show();
