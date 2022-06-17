@@ -80,7 +80,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TreeView HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="346" Foreground="#FF877D4C" Background="{x:Null}" BorderBrush="#FF918B5F" Margin="2,23,0,0">
+        <TreeView HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="349" Foreground="#FF877D4C" Background="{x:Null}" BorderBrush="#FF918B5F" Margin="2,-1,0,0">
             <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>
