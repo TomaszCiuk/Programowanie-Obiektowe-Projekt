@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Linq;
 using System.Windows;
 namespace Programowanie_Obiektowe___Projekt
 
@@ -15,15 +16,13 @@ namespace Programowanie_Obiektowe___Projekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PROJEKTDataSet db = new PROJEKTDataSet();
-            Itemy itemy = new Itemy();
-            itemy.Nazwa = itemName.Text;
+            DataContext db = new DataContext();
+        
             
             switch(itemCategory.SelectedValue.ToString())
             {
                 
-            }
-
+            }  
         }
         public class TarkovContext : DbContext
         {

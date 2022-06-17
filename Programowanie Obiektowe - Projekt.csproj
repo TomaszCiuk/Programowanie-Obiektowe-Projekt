@@ -161,6 +161,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Oder.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Oder.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Projekt.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,6 +207,14 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Projekt.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Oder.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Oder.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oder.dbml.layout">
+      <DependentUpon>Oder.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Projekt.edmx.diagram">
       <DependentUpon>Projekt.edmx</DependentUpon>

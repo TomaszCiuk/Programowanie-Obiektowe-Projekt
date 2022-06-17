@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PROJEKT" Class="OderDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-R9OTGDO\SQLCOURSE2019;Initial Catalog=PROJEKT;Integrated Security=True" SettingsObjectName="Programowanie_Obiektowe___Projekt.Properties.Settings" SettingsPropertyName="PROJEKTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Itemy" Member="Itemy">
+    <Type Name="Itemy">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="KategoriaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Jaeger" Member="Jaeger" ThisKey="ID" OtherKey="ItemID" Type="Jaeger" />
+      <Association Name="Itemy_Mechanic" Member="Mechanic" ThisKey="ID" OtherKey="ItemID" Type="Mechanic" />
+      <Association Name="Itemy_Peacekeeper" Member="Peacekeeper" ThisKey="ID" OtherKey="ItemID" Type="Peacekeeper" />
+      <Association Name="Itemy_Prapor" Member="Prapor" ThisKey="ID" OtherKey="ItemID" Type="Prapor" />
+      <Association Name="Itemy_Ragman" Member="Ragman" ThisKey="ID" OtherKey="ItemID" Type="Ragman" />
+      <Association Name="Itemy_Skier" Member="Skier" ThisKey="ID" OtherKey="ItemID" Type="Skier" />
+      <Association Name="Itemy_Therapist" Member="Therapist" ThisKey="ID" OtherKey="ItemID" Type="Therapist" />
+      <Association Name="Kategoria_Itemy" Member="Kategoria" ThisKey="KategoriaID" OtherKey="ID" Type="Kategoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jaeger" Member="Jaeger">
+    <Type Name="Jaeger">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Jaeger" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kategoria" Member="Kategoria">
+    <Type Name="Kategoria">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="Kategoria_Itemy" Member="Itemy" ThisKey="ID" OtherKey="KategoriaID" Type="Itemy" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mechanic" Member="Mechanic">
+    <Type Name="Mechanic">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Mechanic" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Peacekeeper" Member="Peacekeeper">
+    <Type Name="Peacekeeper">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Peacekeeper" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Prapor" Member="Prapor">
+    <Type Name="Prapor">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Prapor" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ragman" Member="Ragman">
+    <Type Name="Ragman">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Ragman" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Skier" Member="Skier">
+    <Type Name="Skier">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Skier" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Therapist" Member="Therapist">
+    <Type Name="Therapist">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaSprzedaży" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CenaKupna" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Itemy_Therapist" Member="Itemy" ThisKey="ItemID" OtherKey="ID" Type="Itemy" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
