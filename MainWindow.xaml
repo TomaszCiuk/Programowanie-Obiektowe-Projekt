@@ -22,7 +22,7 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="623,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="795,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Ragman.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="881,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Jaeger.jpg"/>
-        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="25" Margin="514,314,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="296" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center" BorderBrush="#FF918B5F" Background="{x:Null}" Foreground="White">
+        <TextBox x:Name="NazwaItemu" HorizontalAlignment="Left" Height="25" Margin="513,292,0,0" TextWrapping="Wrap" Text="Przedmiot" VerticalAlignment="Top" Width="297" TextChanged="TextBox_TextChanged" IsReadOnly="True" TextDecorations="{x:Null}" TextAlignment="Center" BorderBrush="#FF918B5F" Background="{x:Null}" Foreground="White" FontSize="16">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -258,24 +258,52 @@
                 </DataGrid>
             </TreeViewItem>
         </TreeView>
-        <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="White" Click="ButtonPrice_Click">
+        <Button Content="Kup" HorizontalAlignment="Left" Height="43" Margin="513,357,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="White" Click="ButtonPrice_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,362,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="#FFFCFCFC" Click="Button_Click_1"/>
+        <Button Content="Sprzedaj" HorizontalAlignment="Left" Height="43" Margin="710,357,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" BorderBrush="#FF918B5F" Foreground="#FFFCFCFC" Click="Button_Click_1"/>
         <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="1043,362,0,0" VerticalAlignment="Top"/>
         <Button Content="Dodaj" HorizontalAlignment="Left" Height="43" Margin="910,362,0,0" VerticalAlignment="Top" Width="50" BorderBrush="#FF99904D" Background="{x:Null}" Foreground="White" Click="Button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox  x:Name="praporPrice" HorizontalAlignment="Left" Height="50" Margin="373,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
-        <TextBox  x:Name="therapistPrice" HorizontalAlignment="Left" Height="50" Margin="453,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
-        <TextBox  x:Name="skierPrice" HorizontalAlignment="Left" Height="50" Margin="538,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
-        <TextBox  x:Name="peacekeeperPrice" HorizontalAlignment="Left" Height="50" Margin="623,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
-        <TextBox  x:Name="mechanicPrice" HorizontalAlignment="Left" Height="50" Margin="710,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
-        <TextBox  x:Name="ragmanPrice" HorizontalAlignment="Left" Height="50" Margin="795,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
-        <TextBox  x:Name="jaegerPrice" HorizontalAlignment="Left" Height="50" Margin="881,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
+        <TextBox  x:Name="praporPrice" HorizontalAlignment="Left" Height="50" Margin="373,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox  x:Name="therapistPrice" HorizontalAlignment="Left" Height="50" Margin="453,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox  x:Name="skierPrice" HorizontalAlignment="Left" Height="50" Margin="538,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox  x:Name="peacekeeperPrice" HorizontalAlignment="Left" Height="50" Margin="623,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox  x:Name="mechanicPrice" HorizontalAlignment="Left" Height="50" Margin="710,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox  x:Name="ragmanPrice" HorizontalAlignment="Left" Height="50" Margin="795,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox  x:Name="jaegerPrice" HorizontalAlignment="Left" Height="50" Margin="881,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
     </Grid>
 </Window>
