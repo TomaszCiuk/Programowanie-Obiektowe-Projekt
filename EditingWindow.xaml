@@ -49,16 +49,25 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox HorizontalAlignment="Left" Margin="63,108,0,0" VerticalAlignment="Top" Width="166">
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        <ComboBox HorizontalAlignment="Left" Margin="63,97,0,0" VerticalAlignment="Top" Width="166">
+            <TextBlock TextWrapping="Wrap" Text="BaarterItems"/>
+            <TextBlock TextWrapping="Wrap" Text="Gear"/>
+            <TextBlock TextWrapping="Wrap" Text="WeaponsParts"/>
+            <TextBlock TextWrapping="Wrap" Text="Weapons"/>
+            <TextBlock TextWrapping="Wrap" Text="Ammo"/>
+            <TextBlock TextWrapping="Wrap" Text="Provisions"/>
+            <TextBlock TextWrapping="Wrap" Text="Medication"/>
+            <TextBlock TextWrapping="Wrap" Text="Keys"/>
+            <TextBlock TextWrapping="Wrap" Text="SpecialEquipment"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="63,307,0,0" VerticalAlignment="Top" Width="166">
+            <TextBlock TextWrapping="Wrap" Text="Prapor"/>
+            <TextBlock TextWrapping="Wrap" Text="Therapist"/>
+            <TextBlock TextWrapping="Wrap" Text="Skier"/>
+            <TextBlock TextWrapping="Wrap" Text="Peacekepeer"/>
+            <TextBlock TextWrapping="Wrap" Text="Mechanic"/>
+            <TextBlock TextWrapping="Wrap" Text="Ragman"/>
+            <TextBlock TextWrapping="Wrap" Text="Jaeger"/>
         </ComboBox>
 
     </Grid>
