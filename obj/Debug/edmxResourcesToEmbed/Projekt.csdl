@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROJEKTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Itemy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazwa" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KategoriaID" Type="Int32" />
+    <NavigationProperty Name="Kategoria" Relationship="Self.FK__Itemy__Kategoria__276EDEB3" FromRole="Itemy" ToRole="Kategoria" />
+  </EntityType>
+  <EntityType Name="Kategoria">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazwa" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Itemies" Relationship="Self.FK__Itemy__Kategoria__276EDEB3" FromRole="Kategoria" ToRole="Itemy" />
+  </EntityType>
+  <Association Name="FK__Itemy__Kategoria__276EDEB3">
+    <End Role="Kategoria" Type="Self.Kategoria" Multiplicity="0..1" />
+    <End Role="Itemy" Type="Self.Itemy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoria">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Itemy">
+        <PropertyRef Name="KategoriaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PROJEKTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Itemies" EntityType="Self.Itemy" />
+    <EntitySet Name="Kategorias" EntityType="Self.Kategoria" />
+    <AssociationSet Name="FK__Itemy__Kategoria__276EDEB3" Association="Self.FK__Itemy__Kategoria__276EDEB3">
+      <End Role="Kategoria" EntitySet="Kategorias" />
+      <End Role="Itemy" EntitySet="Itemies" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

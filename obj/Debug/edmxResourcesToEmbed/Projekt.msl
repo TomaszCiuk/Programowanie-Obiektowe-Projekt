@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PROJEKTModelStoreContainer" CdmEntityContainer="PROJEKTEntities">
+    <EntitySetMapping Name="Itemies">
+      <EntityTypeMapping TypeName="PROJEKTModel.Itemy">
+        <MappingFragment StoreEntitySet="Itemy">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="KategoriaID" ColumnName="KategoriaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategorias">
+      <EntityTypeMapping TypeName="PROJEKTModel.Kategoria">
+        <MappingFragment StoreEntitySet="Kategoria">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

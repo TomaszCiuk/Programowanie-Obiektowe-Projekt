@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROJEKTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Itemy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="KategoriaID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Jaeger' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Jaeger">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Kategoria">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Mechanic' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Mechanic">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Peacekeeper' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Peacekeeper">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Prapor' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Prapor">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Ragman' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ragman">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Skier' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Skier">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PROJEKT.dbo.Therapist' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Therapist">
+          <Property Name="ItemID" Type="int" />
+          <Property Name="CenaSprzedaży" Type="int" />
+          <Property Name="CenaKupna" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>-->
+  <Association Name="FK__Itemy__Kategoria__276EDEB3">
+    <End Role="Kategoria" Type="Self.Kategoria" Multiplicity="0..1" />
+    <End Role="Itemy" Type="Self.Itemy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoria">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Itemy">
+        <PropertyRef Name="KategoriaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Jaeger' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Jaeger__ItemID__3C69FB99" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Mechanic' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Mechanic__ItemID__38996AB5" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Peacekeeper' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Peacekeep__ItemI__403A8C7D" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Prapor' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Prapor__ItemID__29572725" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Ragman' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Ragman__ItemID__34C8D9D1" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Skier' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Skier__ItemID__30F848ED" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'PROJEKT.dbo.Therapist' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Therapist__ItemI__2D27B809" />-->
+  <EntityContainer Name="PROJEKTModelStoreContainer">
+    <EntitySet Name="Itemy" EntityType="Self.Itemy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategoria" EntityType="Self.Kategoria" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Itemy__Kategoria__276EDEB3" Association="Self.FK__Itemy__Kategoria__276EDEB3">
+      <End Role="Kategoria" EntitySet="Kategoria" />
+      <End Role="Itemy" EntitySet="Itemy" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
