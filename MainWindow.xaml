@@ -60,7 +60,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Peacekepeer" HorizontalAlignment="Left" Height="37" Margin="608,156,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+        <Label Content="Peacekeeper" HorizontalAlignment="Left" Height="37" Margin="608,156,0,0" VerticalAlignment="Top" Width="106" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
@@ -80,7 +80,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TreeView HorizontalAlignment="Left" Height="431" VerticalAlignment="Center" Width="346" Foreground="#FF877D4C" Background="{x:Null}" BorderBrush="#FF918B5F">
+        <TreeView HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="346" Foreground="#FF877D4C" Background="{x:Null}" BorderBrush="#FF918B5F" Margin="2,23,0,0">
             <TreeViewItem Header="BaarterItems" IsSelected="True" Width="338" Foreground="White">
                 <DataGrid x:Name="barterItemsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="282" Height="217">
                     <DataGrid.Columns>

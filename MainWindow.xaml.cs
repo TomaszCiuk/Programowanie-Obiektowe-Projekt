@@ -138,6 +138,11 @@ namespace Programowanie_Obiektowe___Projekt
             pROJEKTDataRagmanTableAdapter.Fill(pROJEKTDataSet.Ragman);
             System.Windows.Data.CollectionViewSource ragmanViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
             ragmanViewSource.View.MoveCurrentToFirst();
+
+            PROJEKTDataSetTableAdapters.JaegerTableAdapter pROJEKTDataJaegerTableAdapter = new PROJEKTDataSetTableAdapters.JaegerTableAdapter();
+            pROJEKTDataJaegerTableAdapter.Fill(pROJEKTDataSet.Jaeger);
+            System.Windows.Data.CollectionViewSource jaegerViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            jaegerViewSource.View.MoveCurrentToFirst();
         }
 
 
@@ -295,13 +300,25 @@ namespace Programowanie_Obiektowe___Projekt
             //    on trader.ItemID equals item.ID
             //    where item.Nazwa == NazwaItemu.Text
             //    select trader.CenaKupna;
-            
+
             //praporPrice.Text =
             //    quaryPrapor.FirstOrDefault() == 0
             //    ? "Handlarz nie sprzedaje przedmiotu"
             //    : $"{quaryPrapor.FirstOrDefault()} ₽";
 
-            SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
+            //  SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
+
+            var quaryPrapor =
+                from trader in pROJEKTDataSet.Prapor
+                join item in pROJEKTDataSet.Itemy
+                on trader.ItemID equals item.ID
+                where item.Nazwa == NazwaItemu.Text
+                select trader.CenaKupna;
+
+            praporPrice.Text =
+                quaryPrapor.FirstOrDefault() == 0
+                ? "Handlarz nie sprzedaje przedmiotu"
+                : $"{quaryPrapor.FirstOrDefault()} ₽";
 
             var quaryTherapist =
                 from trader in pROJEKTDataSet.Therapist
@@ -385,7 +402,7 @@ namespace Programowanie_Obiektowe___Projekt
             CollectionViewSource itemyViewSource = (CollectionViewSource)FindResource("itemyViewSource");
             itemyViewSource.View.MoveCurrentToFirst();
 
-            SetPrice<PraporDataTable>(praporPrice, pROJEKTDataSet, pROJEKTDataSet.Prapor);
+            //SetPrice<PraporDataTable>(praporPrice, pROJEKTDataSet, pROJEKTDataSet.Prapor);
 
             var quaryPrapor =
                 from trader in pROJEKTDataSet.Prapor
@@ -399,7 +416,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryPrapor.FirstOrDefault()} ₽";
 
-            SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
+           // SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
 
             var quaryTherapist =
                 from trader in pROJEKTDataSet.Therapist
@@ -413,7 +430,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryTherapist.FirstOrDefault()} ₽";
 
-            SetPrice<SkierDataTable>(skierPrice, pROJEKTDataSet, pROJEKTDataSet.Skier);
+          //  SetPrice<SkierDataTable>(skierPrice, pROJEKTDataSet, pROJEKTDataSet.Skier);
 
             var quarySkier =
                 from skier in pROJEKTDataSet.Skier
@@ -427,7 +444,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quarySkier.FirstOrDefault()} ₽";
 
-            SetPrice<PeacekeeperDataTable>(peacekeeperPrice, pROJEKTDataSet, pROJEKTDataSet.Peacekeeper);
+            //SetPrice<PeacekeeperDataTable>(peacekeeperPrice, pROJEKTDataSet, pROJEKTDataSet.Peacekeeper);
 
             var quaryPeacekeeper =
                 from peacekeeper in pROJEKTDataSet.Peacekeeper
@@ -441,7 +458,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryPeacekeeper.FirstOrDefault()} $";
 
-            SetPrice<MechanicDataTable>(mechanicPrice, pROJEKTDataSet, pROJEKTDataSet.Mechanic);
+            //SetPrice<MechanicDataTable>(mechanicPrice, pROJEKTDataSet, pROJEKTDataSet.Mechanic);
 
             var quaryMechanic =
                 from mechanic in pROJEKTDataSet.Mechanic
@@ -455,7 +472,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryMechanic.FirstOrDefault()} ₽";
 
-            SetPrice<RagmanDataTable>(ragmanPrice, pROJEKTDataSet, pROJEKTDataSet.Ragman);
+            //SetPrice<RagmanDataTable>(ragmanPrice, pROJEKTDataSet, pROJEKTDataSet.Ragman);
 
             var quaryRagman =
                 from ragman in pROJEKTDataSet.Ragman
@@ -469,7 +486,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryRagman.FirstOrDefault()} ₽";
 
-            SetPrice<JaegerDataTable>(jaegerPrice, pROJEKTDataSet, pROJEKTDataSet.Jaeger);
+           // SetPrice<JaegerDataTable>(jaegerPrice, pROJEKTDataSet, pROJEKTDataSet.Jaeger);
 
             var quaryJaeger =
                 from jaeger in pROJEKTDataSet.Jaeger
