@@ -15,8 +15,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/tlo_glowne_okno.jpg"/>
         </Grid.Background>
-        <Image HorizontalAlignment="Left" Height="75" Margin="368,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg"/>
-        <Image HorizontalAlignment="Left" Height="75" Margin="453,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="368,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Prapor.jpg" />
+        <Image HorizontalAlignment="Left" Height="75" Margin="453,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Therapist.jpg" />
         <Image HorizontalAlignment="Left" Height="75" Margin="538,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Skier.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="710,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Mechanic.jpg"/>
         <Image HorizontalAlignment="Left" Height="75" Margin="623,87,0,0" VerticalAlignment="Top" Width="75" Source="Images/Peacekeeper.jpg"/>
@@ -305,5 +305,8 @@
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Height="43" Margin="255,369,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Search:" HorizontalAlignment="Left" Height="34" Margin="10,374,0,0" VerticalAlignment="Top" Width="60" Foreground="White"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="27" Margin="70,377,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="157"/>
     </Grid>
 </Window>

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
@@ -501,6 +503,37 @@ namespace Programowanie_Obiektowe___Projekt
                 quaryJaeger.FirstOrDefault() == 0
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryJaeger.FirstOrDefault()} ₽";
+        }
+
+        //Wyszukiwarka
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            
+                try
+                {
+                    using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+                    {
+                        if (cn.State == ConnectionState.Closed)
+                            cn.Open();
+
+                        using (DataTable dt = new DataTable("Itemy"))
+                        {
+                            using (SqlCommand cmd = new SqlCommand("Select * from Itemy where Nazwa like @Nazwa", cn))
+                            {
+                                cmd.Parameters.AddWithValue("Nazwa", string.Format("%{0}%", txtSearch.Text));
+                                SqlDataAdapter adapter = new SqlDataAdapter();
+                                adapter.Fill(dt);
+                          //  SqlDataView.DataSource = dt;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ups! coś poszło nie tak :(", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            
         }
     }
 }

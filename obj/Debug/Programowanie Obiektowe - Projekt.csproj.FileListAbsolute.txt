@@ -22,3 +22,28 @@ C:\Users\Tomek.DESKTOP-HDFK083\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-P
 C:\Users\Tomek.DESKTOP-HDFK083\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.csproj.CopyComplete
 C:\Users\Tomek.DESKTOP-HDFK083\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.exe
 C:\Users\Tomek.DESKTOP-HDFK083\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.pdb
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\Programowanie Obiektowe - Projekt.exe.config
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\Programowanie Obiektowe - Projekt.exe
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\Programowanie Obiektowe - Projekt.pdb
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\EntityFramework.dll
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\EntityFramework.xml
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.csproj.AssemblyReference.cache
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.csproj.SuggestedBindingRedirects.cache
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\EditingWindow.g.cs
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\MainWindow.g.cs
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\App.g.cs
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt_Content.g.cs
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt_MarkupCompile.cache
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt_MarkupCompile.lref
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\EditingWindow.baml
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\MainWindow.baml
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.g.resources
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie_Obiektowe___Projekt.Properties.Resources.resources
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.csproj.GenerateResource.cache
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.csproj.CopyComplete
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.exe
+C:\Users\Asus\Source\Repos\TomaszCiuk\Programowanie-Obiektowe-Projekt\obj\Debug\Programowanie Obiektowe - Projekt.pdb
