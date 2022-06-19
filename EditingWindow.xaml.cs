@@ -16,7 +16,8 @@ namespace Programowanie_Obiektowe___Projekt
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             PROJEKTDataSet db = new PROJEKTDataSet();
-            DataRow itemRow = db.Tables["Itemy"].NewRow();
+            PROJEKTDataSet.ItemyDataTable itemy = new PROJEKTDataSet.ItemyDataTable();
+            PROJEKTDataSet.ItemyRow itemRow = itemy.NewItemyRow();
             itemRow["Nazwa"] = itemName.Text;
             
             switch(itemCategory.SelectedValue.ToString())
@@ -55,7 +56,8 @@ namespace Programowanie_Obiektowe___Projekt
                     itemRow["KategoriaID"] = 11;
                     break;
             }
-            db.Tables["Itemy"].Rows.Add(itemRow);
+            itemy.Rows.Add(itemRow);
+       
 
         }
     }
