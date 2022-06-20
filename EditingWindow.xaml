@@ -5,46 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programowanie_Obiektowe___Projekt"
         mc:Ignorable="d"
-        Title="EditingWindow" Height="450" Width="300">
-    <Grid>
+        Title="EditingWindow" Height="570" Width="300">
+    <Grid Margin="0,0,0,0">
         <Grid.Background>
             <ImageBrush ImageSource="/tło_Editing_Window.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="177*"/>
-            <RowDefinition Height="40*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="Dodaj przedmiot" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="166" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White">
+        <Label Content="Dodaj przedmiot" HorizontalAlignment="Center" Height="40" Margin="63,10,63,0" VerticalAlignment="Top" Width="166" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="itemName" HorizontalAlignment="Center" Height="25" Margin="0,55,0,0" TextWrapping="Wrap" Text="Nazwa" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+        <TextBox x:Name="itemName" HorizontalAlignment="Center" Height="25" Margin="46,55,46,0" TextWrapping="Wrap" Text="Nazwa" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
             <TextBox.Background>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="0,160,0,0" VerticalAlignment="Top" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F" Click="Button_Click">
+        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="121,160,121,0" VerticalAlignment="Top" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F" Click="Button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Przypisz przedmiot" HorizontalAlignment="Center" Height="40" Margin="0,190,0,0" VerticalAlignment="Top" Width="200" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White">
+        <Label Content="Przypisz przedmiot" HorizontalAlignment="Center" Height="40" Margin="46,190,46,0" VerticalAlignment="Top" Width="200" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,235,0,0" TextWrapping="Wrap" Text="Cena kupna" VerticalAlignment="Top" Width="100" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="96,235,96,0" x:Name="itemBuy" TextWrapping="Wrap" PreviewTextInput="PreviewTextInput" Text="Cena kupna" VerticalAlignment="Top" Width="100" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
             <TextBox.Background>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,265,0,0" TextWrapping="Wrap" Text="Cena sprzedaży" VerticalAlignment="Top" Width="100" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="96,265,96,0" x:Name="itemSell" TextWrapping="Wrap" PreviewTextInput="PreviewTextInput" Text="Cena sprzedaży" VerticalAlignment="Top" Width="100" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
             <TextBox.Background>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </TextBox.Background>
         </TextBox>
-        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="121,42,121,0" VerticalAlignment="Top" Width="50" Grid.Row="1" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F">
+        <Button Content="Dodaj" HorizontalAlignment="Center" Height="25" Margin="121,502,121,0" VerticalAlignment="Top" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="#FF918B5F" Click="Button_Click_1">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -60,7 +59,7 @@
             <TextBlock TextWrapping="Wrap" Text="Keys"/>
             <TextBlock TextWrapping="Wrap" Text="SpecialEquipment"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="63,307,0,0" VerticalAlignment="Top" Width="166">
+        <ComboBox x:Name="trader" HorizontalAlignment="Left" Margin="63,319,0,0" VerticalAlignment="Top" SelectedValuePath="Text" Width="166" SelectionChanged="ComboBox_SelectionChanged">
             <TextBlock TextWrapping="Wrap" Text="Prapor"/>
             <TextBlock TextWrapping="Wrap" Text="Therapist"/>
             <TextBlock TextWrapping="Wrap" Text="Skier"/>
@@ -70,7 +69,22 @@
             <TextBlock TextWrapping="Wrap" Text="Jaeger"/>
         </ComboBox>
         <TextBox  x:Name="addingMessage" HorizontalAlignment="Left" Height="31" Margin="46,124,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="200" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" Background="{x:Null}"/>
-        <TextBox  x:Name="assingMessage" HorizontalAlignment="Left" Height="31" Margin="63,334,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="166" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" Background="{x:Null}" Grid.RowSpan="2"/>
+        <TextBox  x:Name="assingMessage" HorizontalAlignment="Left" Height="31" Margin="63,459,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="166" TextAlignment="Center" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" Background="{x:Null}"/>
+        <TextBox x:Name="itemAddingName" HorizontalAlignment="Center" Height="25" Margin="80,289,82,0" TextWrapping="Wrap" Text="Nazwa przedmiotu" VerticalAlignment="Top" Width="130" TextAlignment="Center" Foreground="White" BorderBrush="{x:Null}">
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <Image x:Name="traderImage" HorizontalAlignment="Left" Height="87" Margin="100,355,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.562"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.49"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>

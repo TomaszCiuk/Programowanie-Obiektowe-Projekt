@@ -1,7 +1,4 @@
-﻿using System;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
+﻿using System.Data;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -504,7 +501,7 @@ namespace Programowanie_Obiektowe___Projekt
                 : $"{quaryJaeger.FirstOrDefault()} ₽";
         }
 
-        
+
 
     }
 }
