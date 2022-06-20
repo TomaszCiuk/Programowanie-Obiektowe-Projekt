@@ -26,7 +26,7 @@ namespace Programowanie_Obiektowe___Projekt
             // Załaduj dane do tabeli Itemy. Możesz modyfikować ten kod w razie potrzeby.
             PROJEKTDataSetTableAdapters.ItemyTableAdapter pROJEKTDataSetItemyTableAdapter = new PROJEKTDataSetTableAdapters.ItemyTableAdapter();
             pROJEKTDataSetItemyTableAdapter.Fill(pROJEKTDataSet.Itemy);
-            System.Windows.Data.CollectionViewSource itemyViewSource = (System.Windows.Data.CollectionViewSource)this.FindResource("itemyViewSource");
+            CollectionViewSource itemyViewSource = (CollectionViewSource)this.FindResource("itemyViewSource");
             itemyViewSource.View.MoveCurrentToFirst();
 
             var queryBarterItemsDataGrid =
@@ -111,37 +111,37 @@ namespace Programowanie_Obiektowe___Projekt
             // jesśli się zmieni na końcu findresource na każdego tradera, nie prapora to wyżuca błąd
             PROJEKTDataSetTableAdapters.PraporTableAdapter pROJEKTDataSetPraporTableAdapter = new PROJEKTDataSetTableAdapters.PraporTableAdapter();
             pROJEKTDataSetPraporTableAdapter.Fill(pROJEKTDataSet.Prapor);
-            System.Windows.Data.CollectionViewSource praporViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource praporViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             praporViewSource.View.MoveCurrentToFirst();
 
             PROJEKTDataSetTableAdapters.TherapistTableAdapter pROJEKTDataSetTherapistTableAdapter = new PROJEKTDataSetTableAdapters.TherapistTableAdapter();
             pROJEKTDataSetTherapistTableAdapter.Fill(pROJEKTDataSet.Therapist);
-            System.Windows.Data.CollectionViewSource therapistViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource therapistViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             therapistViewSource.View.MoveCurrentToFirst();
 
             PROJEKTDataSetTableAdapters.SkierTableAdapter pROJEKTDataSetSkierTableAdapter = new PROJEKTDataSetTableAdapters.SkierTableAdapter();
             pROJEKTDataSetSkierTableAdapter.Fill(pROJEKTDataSet.Skier);
-            System.Windows.Data.CollectionViewSource skierViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource skierViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             skierViewSource.View.MoveCurrentToFirst();
 
             PROJEKTDataSetTableAdapters.PeacekeeperTableAdapter pROJEKTDataPeacekeeperTableAdapter = new PROJEKTDataSetTableAdapters.PeacekeeperTableAdapter();
             pROJEKTDataPeacekeeperTableAdapter.Fill(pROJEKTDataSet.Peacekeeper);
-            System.Windows.Data.CollectionViewSource peacekeeperViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource peacekeeperViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             peacekeeperViewSource.View.MoveCurrentToFirst();
 
             PROJEKTDataSetTableAdapters.MechanicTableAdapter pROJEKTDataMechanicTableAdapter = new PROJEKTDataSetTableAdapters.MechanicTableAdapter();
             pROJEKTDataMechanicTableAdapter.Fill(pROJEKTDataSet.Mechanic);
-            System.Windows.Data.CollectionViewSource mechanicViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource mechanicViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             mechanicViewSource.View.MoveCurrentToFirst();
 
             PROJEKTDataSetTableAdapters.RagmanTableAdapter pROJEKTDataRagmanTableAdapter = new PROJEKTDataSetTableAdapters.RagmanTableAdapter();
             pROJEKTDataRagmanTableAdapter.Fill(pROJEKTDataSet.Ragman);
-            System.Windows.Data.CollectionViewSource ragmanViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource ragmanViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             ragmanViewSource.View.MoveCurrentToFirst();
 
             PROJEKTDataSetTableAdapters.JaegerTableAdapter pROJEKTDataJaegerTableAdapter = new PROJEKTDataSetTableAdapters.JaegerTableAdapter();
             pROJEKTDataJaegerTableAdapter.Fill(pROJEKTDataSet.Jaeger);
-            System.Windows.Data.CollectionViewSource jaegerViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("praporViewSource")));
+            CollectionViewSource jaegerViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
             jaegerViewSource.View.MoveCurrentToFirst();
         }
 
