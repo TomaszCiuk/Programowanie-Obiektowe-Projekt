@@ -2,12 +2,10 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using static Programowanie_Obiektowe___Projekt.PROJEKTDataSet;
 
 namespace Programowanie_Obiektowe___Projekt
 {
@@ -259,6 +257,7 @@ namespace Programowanie_Obiektowe___Projekt
         {
 
         }
+
         EditingWindow wnd;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -357,7 +356,7 @@ namespace Programowanie_Obiektowe___Projekt
                 quaryPeacekeeper.FirstOrDefault() == 0
                 ? "Handlarz nie sprzedaje przedmiotu"
                 : $"{quaryPeacekeeper.FirstOrDefault()} $" + '\n' +
-                $" {quaryPeacekeeper.FirstOrDefault()*112}  ₽";
+                $" {quaryPeacekeeper.FirstOrDefault() * 112}  ₽";
 
             var quaryMechanic =
                 from mechanic in pROJEKTDataSet.Mechanic
@@ -419,7 +418,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryPrapor.FirstOrDefault()} ₽";
 
-           // SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
+            // SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
 
             var quaryTherapist =
                 from trader in pROJEKTDataSet.Therapist
@@ -433,7 +432,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryTherapist.FirstOrDefault()} ₽";
 
-          //  SetPrice<SkierDataTable>(skierPrice, pROJEKTDataSet, pROJEKTDataSet.Skier);
+            //  SetPrice<SkierDataTable>(skierPrice, pROJEKTDataSet, pROJEKTDataSet.Skier);
 
             var quarySkier =
                 from skier in pROJEKTDataSet.Skier
@@ -490,7 +489,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryRagman.FirstOrDefault()} ₽";
 
-           // SetPrice<JaegerDataTable>(jaegerPrice, pROJEKTDataSet, pROJEKTDataSet.Jaeger);
+            // SetPrice<JaegerDataTable>(jaegerPrice, pROJEKTDataSet, pROJEKTDataSet.Jaeger);
 
             var quaryJaeger =
                 from jaeger in pROJEKTDataSet.Jaeger
@@ -505,35 +504,7 @@ namespace Programowanie_Obiektowe___Projekt
                 : $"{quaryJaeger.FirstOrDefault()} ₽";
         }
 
-        //Wyszukiwarka
+        
 
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            
-                try
-                {
-                    using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
-                    {
-                        if (cn.State == ConnectionState.Closed)
-                            cn.Open();
-
-                        using (DataTable dt = new DataTable("Itemy"))
-                        {
-                            using (SqlCommand cmd = new SqlCommand("Select * from Itemy where Nazwa like @Nazwa", cn))
-                            {
-                                cmd.Parameters.AddWithValue("Nazwa", string.Format("%{0}%", txtSearch.Text));
-                                SqlDataAdapter adapter = new SqlDataAdapter();
-                                adapter.Fill(dt);
-                          //  SqlDataView.DataSource = dt;
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ups! coś poszło nie tak :(", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            
-        }
     }
 }
