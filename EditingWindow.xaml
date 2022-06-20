@@ -49,7 +49,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox x:Name="itemCategory" HorizontalAlignment="Left" Margin="63,97,0,0" VerticalAlignment="Top" Width="166" SelectedValuePath="Text">
+        <ComboBox x:Name="itemCategory" HorizontalAlignment="Left" Margin="63,97,0,0" VerticalAlignment="Top" Width="166" SelectedValuePath="Text" Text="Kategoria" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF080808">
             <TextBlock TextWrapping="Wrap" Text="BaarterItems"/>
             <TextBlock TextWrapping="Wrap" Text="Gear"/>
             <TextBlock TextWrapping="Wrap" Text="WeaponsParts"/>

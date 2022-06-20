@@ -11,7 +11,7 @@
         <CollectionViewSource x:Key="itemyViewSource" Source="{Binding Itemy, Source={StaticResource pROJEKTDataSet}}"/>
         <CollectionViewSource x:Key="praporViewSource" Source="{Binding Prapor, Source={StaticResource pROJEKTDataSet}}"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource itemyViewSource}">
+    <Grid x:Name="Tarkov_Calculator" DataContext="{StaticResource itemyViewSource}">
         <Grid.Background>
             <ImageBrush ImageSource="/tlo_glowne_okno.jpg"/>
         </Grid.Background>
