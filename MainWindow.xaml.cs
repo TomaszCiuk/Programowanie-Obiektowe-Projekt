@@ -19,12 +19,15 @@ namespace Programowanie_Obiektowe___Projekt
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
+            //Ładowanie danych do tabeli itemy
+
             PROJEKTDataSet pROJEKTDataSet = (PROJEKTDataSet)this.FindResource("pROJEKTDataSet");
-            // Załaduj dane do tabeli Itemy. Możesz modyfikować ten kod w razie potrzeby.
             PROJEKTDataSetTableAdapters.ItemyTableAdapter pROJEKTDataSetItemyTableAdapter = new PROJEKTDataSetTableAdapters.ItemyTableAdapter();
             pROJEKTDataSetItemyTableAdapter.Fill(pROJEKTDataSet.Itemy);
             CollectionViewSource itemyViewSource = (CollectionViewSource)this.FindResource("itemyViewSource");
             itemyViewSource.View.MoveCurrentToFirst();
+
+            //Zapytania linq podzielone na kategorie przedmiotów
 
             var queryBarterItemsDataGrid =
             from item in pROJEKTDataSet.Itemy
@@ -92,6 +95,8 @@ namespace Programowanie_Obiektowe___Projekt
             orderby item.Nazwa
             select new { item.Nazwa };
 
+            //Wyświetlanie wynikó zapytań w tabelach
+
             barterItemsDataGrid.ItemsSource = queryBarterItemsDataGrid.ToList();
             gearDataGrid.ItemsSource = queryGearDataGrid.ToList();
             weaponsPartsDataGrid.ItemsSource = queryWeaponsPartsDataGrid.ToList();
@@ -104,8 +109,8 @@ namespace Programowanie_Obiektowe___Projekt
             mapsEquipmentDataGrid.ItemsSource = queryMapsDataGrid.ToList();
             moneyEquipmentDataGrid.ItemsSource = queryMoneyDataGrid.ToList();
 
-            // Załaduj dane do tabeli Prapor. Możesz modyfikować ten kod w razie potrzeby.
-            // jesśli się zmieni na końcu findresource na każdego tradera, nie prapora to wyżuca błąd
+            // Ładowanie danych do tabeli traderów
+
             PROJEKTDataSetTableAdapters.PraporTableAdapter pROJEKTDataSetPraporTableAdapter = new PROJEKTDataSetTableAdapters.PraporTableAdapter();
             pROJEKTDataSetPraporTableAdapter.Fill(pROJEKTDataSet.Prapor);
             CollectionViewSource praporViewSource = (CollectionViewSource)this.FindResource("praporViewSource");
@@ -142,6 +147,7 @@ namespace Programowanie_Obiektowe___Projekt
             jaegerViewSource.View.MoveCurrentToFirst();
         }
 
+        //Przypisanie nazwy wybranego przedmiotu do formularza sprawdzającego ceny, w zależności od kategorii
 
         private void Button_AssingBarterItemsClick(object sender, RoutedEventArgs e)
         {
@@ -255,6 +261,8 @@ namespace Programowanie_Obiektowe___Projekt
 
         }
 
+        //Tworzenie nowego okna dodawania
+
         EditingWindow wnd;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -265,47 +273,17 @@ namespace Programowanie_Obiektowe___Projekt
             }
         }
 
-        private void SetPrice<T>(TextBox textBox, PROJEKTDataSet dataSet, DataTable t)
-        {
-            //var table = t = T;
-            //var query =
-            //    from merchant in table
-            //    join item in dataSet.Itemy
-            //    on merchant.ItemID equals item.ID
-            //    where item.Nazwa == NazwaItemu.Text
-            //    select merchant.CenaKupna;
-
-            //textBox.Text =
-            //    query.FirstOrDefault() == 0
-            //    ? "Handlarz nie kupuje przedmiotu"
-            //    : $"{query.FirstOrDefault()} ₽";
-        }
+        //Wyświetlanie ceny sprzedaży przedmiotu przez każdego z traderów
 
         private void ButtonPrice_Click(object sender, RoutedEventArgs e)
         {
             PROJEKTDataSet pROJEKTDataSet = (PROJEKTDataSet)FindResource("pROJEKTDataSet");
-            // Załaduj dane do tabeli Itemy. Możesz modyfikować ten kod w razie potrzeby.
             PROJEKTDataSetTableAdapters.ItemyTableAdapter pROJEKTDataSetItemyTableAdapter = new PROJEKTDataSetTableAdapters.ItemyTableAdapter();
             pROJEKTDataSetItemyTableAdapter.Fill(pROJEKTDataSet.Itemy);
             CollectionViewSource itemyViewSource = (CollectionViewSource)FindResource("itemyViewSource");
             itemyViewSource.View.MoveCurrentToFirst();
 
-            //SetPrice<PraporDataTable>(praporPrice, pROJEKTDataSet, pROJEKTDataSet.Prapor);
-
-            //var quaryPrapor =
-            //    from trader in pROJEKTDataSet.Prapor
-            //    join item in pROJEKTDataSet.Itemy
-            //    on trader.ItemID equals item.ID
-            //    where item.Nazwa == NazwaItemu.Text
-            //    select trader.CenaKupna;
-
-            //praporPrice.Text =
-            //    quaryPrapor.FirstOrDefault() == 0
-            //    ? "Handlarz nie sprzedaje przedmiotu"
-            //    : $"{quaryPrapor.FirstOrDefault()} ₽";
-
-            //  SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
-
+          
             var quaryPrapor =
                 from trader in pROJEKTDataSet.Prapor
                 join item in pROJEKTDataSet.Itemy
@@ -392,16 +370,15 @@ namespace Programowanie_Obiektowe___Projekt
                 : $"{quaryJaeger.FirstOrDefault()} ₽";
         }
 
+        // Wyświetlanie cen kupna podeanego  przedmiotu u wszystkich handlarzy
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             PROJEKTDataSet pROJEKTDataSet = (PROJEKTDataSet)FindResource("pROJEKTDataSet");
-            // Załaduj dane do tabeli Itemy. Możesz modyfikować ten kod w razie potrzeby.
             PROJEKTDataSetTableAdapters.ItemyTableAdapter pROJEKTDataSetItemyTableAdapter = new PROJEKTDataSetTableAdapters.ItemyTableAdapter();
             pROJEKTDataSetItemyTableAdapter.Fill(pROJEKTDataSet.Itemy);
             CollectionViewSource itemyViewSource = (CollectionViewSource)FindResource("itemyViewSource");
             itemyViewSource.View.MoveCurrentToFirst();
-
-            //SetPrice<PraporDataTable>(praporPrice, pROJEKTDataSet, pROJEKTDataSet.Prapor);
 
             var quaryPrapor =
                 from trader in pROJEKTDataSet.Prapor
@@ -415,7 +392,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryPrapor.FirstOrDefault()} ₽";
 
-            // SetPrice<TherapistDataTable>(therapistPrice, pROJEKTDataSet, pROJEKTDataSet.Therapist);
+           
 
             var quaryTherapist =
                 from trader in pROJEKTDataSet.Therapist
@@ -429,7 +406,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryTherapist.FirstOrDefault()} ₽";
 
-            //  SetPrice<SkierDataTable>(skierPrice, pROJEKTDataSet, pROJEKTDataSet.Skier);
+          
 
             var quarySkier =
                 from skier in pROJEKTDataSet.Skier
@@ -443,7 +420,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quarySkier.FirstOrDefault()} ₽";
 
-            //SetPrice<PeacekeeperDataTable>(peacekeeperPrice, pROJEKTDataSet, pROJEKTDataSet.Peacekeeper);
+           
 
             var quaryPeacekeeper =
                 from peacekeeper in pROJEKTDataSet.Peacekeeper
@@ -458,7 +435,7 @@ namespace Programowanie_Obiektowe___Projekt
                 : $"{quaryPeacekeeper.FirstOrDefault()} $" + '\n' +
                 $" {quaryPeacekeeper.FirstOrDefault() * 112}  ₽";
 
-            //SetPrice<MechanicDataTable>(mechanicPrice, pROJEKTDataSet, pROJEKTDataSet.Mechanic);
+
 
             var quaryMechanic =
                 from mechanic in pROJEKTDataSet.Mechanic
@@ -472,7 +449,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryMechanic.FirstOrDefault()} ₽";
 
-            //SetPrice<RagmanDataTable>(ragmanPrice, pROJEKTDataSet, pROJEKTDataSet.Ragman);
+
 
             var quaryRagman =
                 from ragman in pROJEKTDataSet.Ragman
@@ -486,7 +463,7 @@ namespace Programowanie_Obiektowe___Projekt
                 ? "Handlarz nie kupuje przedmiotu"
                 : $"{quaryRagman.FirstOrDefault()} ₽";
 
-            // SetPrice<JaegerDataTable>(jaegerPrice, pROJEKTDataSet, pROJEKTDataSet.Jaeger);
+
 
             var quaryJaeger =
                 from jaeger in pROJEKTDataSet.Jaeger

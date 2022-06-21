@@ -27,12 +27,14 @@ namespace Programowanie_Obiektowe___Projekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PROJEKTDataSet pROJEKTDataSet = (PROJEKTDataSet)this.FindResource("PROJEKTDataSet");
-            // Załaduj dane do tabeli Itemy. Możesz modyfikować ten kod w razie potrzeby.
+            //Ładowanie danych z tabeli itemy (nie działa)
+            PROJEKTDataSet pROJEKTDataSet = (PROJEKTDataSet)this.FindResource("pROJEKTDataSet");
             PROJEKTDataSetTableAdapters.ItemyTableAdapter pROJEKTDataSetItemyTableAdapter = new PROJEKTDataSetTableAdapters.ItemyTableAdapter();
             PROJEKTDataSet.ItemyDataTable itemy = new PROJEKTDataSet.ItemyDataTable();
             PROJEKTDataSet.ItemyRow itemRow = itemy.NewItemyRow();
             itemRow["Nazwa"] = itemName.Text;
+
+            //Lista kategorii do listy rozwijaniej
 
             switch (itemCategory.SelectedValue.ToString())
             {
@@ -70,12 +72,17 @@ namespace Programowanie_Obiektowe___Projekt
                     itemRow["KategoriaID"] = 11;
                     break;
             }
+
+            // Dodawanie nowego wiersza do tabeli itemy i odświeżenie tej tabeli
+
             itemy.Rows.Add(itemRow);
             CollectionViewSource itemyViewSource = (CollectionViewSource)this.FindResource("itemyViewSource");
             itemyViewSource.View.MoveCurrentToFirst();
 
 
         }
+
+        //Wyświetlanie zdjęcia wybranego handlarza
 
         private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
@@ -128,16 +135,18 @@ namespace Programowanie_Obiektowe___Projekt
             }
         }
 
+        //Przypisywanie przedmiotu do handlarza
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             PROJEKTDataSet pROJEKTDataSet = (PROJEKTDataSet)this.FindResource("pROJEKTDataSet");
-            // Załaduj dane do tabeli Itemy. Możesz modyfikować ten kod w razie potrzeby.
             var quaryIDItem =
                 from item in pROJEKTDataSet.Itemy
                 where item.Nazwa == itemAddingName.Text
                 select item.ID;
             switch (trader.SelectedValue.ToString())
             {
+                //Ustalanie cen kupna i sprzedaży w tabeli wybranego handlarza. Dodanie ich do tabeli i zaktualizowanie jej
                 case "Prapor":
                     PROJEKTDataSet.PraporDataTable prapor = new PROJEKTDataSet.PraporDataTable();
                     PROJEKTDataSet.PraporRow praporItemRow = prapor.NewPraporRow();
