@@ -19,6 +19,9 @@ namespace Programowanie_Obiektowe___Projekt
         {
             InitializeComponent();
         }
+
+        //Funkcja odpowiadająca za blokowanie pisania liter w text boxach w których się powinno wpisać same liczby
+
         private void PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
